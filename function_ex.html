@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <div class="alert-box" id="alert">
+    <p id="msg" class="title">알림창</p>
+    <button id="close">닫기</button>
+  </div>
+  <button onclick="alertOpenClose('block', '아이디 입력하세요');">버튼1</button>
+  <button onclick="alertOpenClose('block', '비밀번호 입력하세요');">버튼2</button>
+
+<script>
+
+  document.getElementById('close').addEventListener('mouseover', function() {
+    document.getElementById('alert').style.display = 'none';
+  });
+
+  function alertOpenClose(param, msgOpen) {
+    document.getElementById('alert').style.display = param;
+    document.getElementsByClassName('title')[0].innerHTML = msgOpen;
+    // document.getElementById('msg').innerHTML = msgOpen;
+  }
+
+</script> 
+</body>
+</html>
