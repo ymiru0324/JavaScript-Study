@@ -1,316 +1,316 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link href="main.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <title>Hello, world!</title>
-  </head>
-  <body>
-    <div class="barcontainer">
-      <div class="progressbar"></div>
-    </div>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link href="main.css" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+  <title>Hello, world!</title>
+</head>
+<body>
+  <div class="barcontainer">
+    <div class="progressbar"></div>
+  </div>
 
-    <div class="black-bg">
-      <div class="white-bg">
-        <h4>로그인하세요</h4>
-        <form action="success.html">
+  <div class="black-bg">
+    <div class="white-bg">
+      <h4>로그인하세요</h4>
+      <form action="success.html">
+        <div class="my-3">
+          <input type="text" class="form-control" id="email">
+          </div>
           <div class="my-3">
-            <input type="text" class="form-control" id="email">
-           </div>
-           <div class="my-3">
-             <input type="password" class="form-control" id="pw">
-           </div>
-           <button type="submit" class="btn btn-primary" id="send">전송</button>
-           <button type="button" class="btn btn-danger" id="close">닫기</button>
-        </form> 
-      </div>
-    </div> 
+            <input type="password" class="form-control" id="pw">
+          </div>
+          <button type="submit" class="btn btn-primary" id="send">전송</button>
+          <button type="button" class="btn btn-danger" id="close">닫기</button>
+      </form> 
+    </div>
+  </div> 
 
-    <script>
-      // document.querySelector('#send').addEventListener('click', function() {
-      //   if(document.getElementById('email').value == "") {
-      //     alert('아이디 입력하세요')
-      //   }
-      // });
-      // $('#send').on('click', function() {
-      $('form').on('submit', function(e) {
-        var emailCheck = document.getElementById('email').value;
-        var pwCheck = document.getElementById('pw').value;
-        if (emailCheck == '') {
-          alert('아이디를 입력하세요 !')
-          e.preventDefault();
-        } else if (/\S+@\S+\.\S+/.test(emailCheck) == false) {
-          alert('이메일 형식이 아닙니다 !')
-          e.preventDefault();
-        } else if (pwCheck == '') {
-          alert('비밀번호를 입력하세요 !')
-          e.preventDefault();
-        } else if (pwCheck.length < '6') {
-          alert('비밀번호를 6자리 이상 입력해주세요 !')
-          e.preventDefault();
-        } else if (/[A-Z]/.test(pwCheck) == false) {
-          alert('비밀번호에 대문자를 입력해주세요 !')
-          e.preventDefault();
-        }
-      });
-    </script>
+  <script>
+    // document.querySelector('#send').addEventListener('click', function() {
+    //   if(document.getElementById('email').value == "") {
+    //     alert('아이디 입력하세요')
+    //   }
+    // });
+    // $('#send').on('click', function() {
+    $('form').on('submit', function(e) {
+      var emailCheck = document.getElementById('email').value;
+      var pwCheck = document.getElementById('pw').value;
+      if (emailCheck == '') {
+        alert('아이디를 입력하세요 !')
+        e.preventDefault();
+      } else if (/\S+@\S+\.\S+/.test(emailCheck) == false) {
+        alert('이메일 형식이 아닙니다 !')
+        e.preventDefault();
+      } else if (pwCheck == '') {
+        alert('비밀번호를 입력하세요 !')
+        e.preventDefault();
+      } else if (pwCheck.length < '6') {
+        alert('비밀번호를 6자리 이상 입력해주세요 !')
+        e.preventDefault();
+      } else if (/[A-Z]/.test(pwCheck) == false) {
+        alert('비밀번호에 대문자를 입력해주세요 !')
+        e.preventDefault();
+      }
+    });
+  </script>
 
+  
+  <nav class="navbar navbar-light bg-light">
+    <div class="container-fluid">
+      <span class="navbar-brand">JSShop</span>
+      <span class="badge bg-dark">Dark 🔄</span>
+      <button class="navbar-toggler" type="button">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
     
-    <nav class="navbar navbar-light bg-light">
-      <div class="container-fluid">
-        <span class="navbar-brand">JSShop</span>
-        <span class="badge bg-dark">Dark 🔄</span>
-        <button class="navbar-toggler" type="button">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
-      
-    </nav>
+  </nav>
+  
+
+  <script>
     
+    $(window).on('scroll', function() {
+      // console.log( window.scrollY )
+      if (window.scrollY > 100) {
+        $('.navbar-brand').css('fontSize', '20px')
+      } else {
+        $('.navbar-brand').css('fontSize', '30px')
+      }
+    });
 
-    <script>
-      
-      $(window).on('scroll', function() {
-        // console.log( window.scrollY )
-        if (window.scrollY > 100) {
-          $('.navbar-brand').css('fontSize', '20px')
-        } else {
-          $('.navbar-brand').css('fontSize', '30px')
+
+    // badge 클릭 횟수가 홀수면 클릭시 내부 글자를 Light로 변경
+    // badge 클릭 횟수가 짝수면 클릭시 내부 글자를 Dark로 변경
+    var badgeCnt = 0;
+    // document.querySelector('.badge').addEventListener('click', function() {
+    //   badgeCnt++;
+    //   if(badgeCnt % 2 == 1) {
+    //     document.querySelector('.badge').innerHTML = 'Light 🔄';
+    //   } else {
+    //     document.querySelector('.badge').innerHTML = 'Dark 🔄';
+    //   }
+    // })
+    $('.badge').on('click', function() {
+      badgeCnt++;
+      if(badgeCnt % 2 == 1) {
+        $('.badge').html('Light 🔄');
+      } else {
+        $('.badge').html('Dark 🔄');
+      }
+    })
+
+  </script>
+
+  <ul class="list-group">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+    <li class="list-group-item">A fourth item</li>
+    <li class="list-group-item">And a fifth one</li>
+  </ul>
+
+  <div class="main-bg">
+    <h4>Shirts on Sale</h4>
+    <button id="login" class="btn btn-danger">로그인</button>
+  </div>
+  <!-- <button id="login">로그인</button> -->
+
+  <!-- <p class="hello">안녕</p>
+  <p class="hello">안녕</p>
+  <p class="hello">안녕</p>
+  <button id="test-btn">버튼</button> -->
+
+  <script> 
+    // document.getElementById('login').addEventListener('click', function(){
+    //   document.querySelector('.black-bg').classList.add('show-modal');
+    // })
+    $('#login').on('click', function() {
+      $('.black-bg').addClass('show-modal');
+    });
+
+    // document.getElementById('close').addEventListener('click', function(){
+    //   document.querySelector('.black-bg').classList.remove('show-modal');
+    // })
+    $('#close').on('click', function() {
+      $('.black-bg').removeClass('show-modal');
+    });
+
+    document.querySelector('.list-group')
+
+    document.querySelector('.navbar-toggler').addEventListener('click', function() {
+      document.querySelector('.list-group').classList.toggle('show');
+    });
+
+    // document.querySelector('.hello').innerHTML = '바보';
+    // $('.hello').html('바보');
+    // $('.hello').css('color', 'red');
+    // $('.hello').addClass('show');
+
+    // document.querySelector('#test-btn').addEventListener();
+    // $('#test-btn').on('click', function() {
+    //   $('.hello').slideUp();
+    // });
+  </script>
+
+  <div class="lorem" style="width: 200px; height:100px; overflow-y: scroll">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+    Quae voluptas voluptatum minus praesentium fugit debitis at, laborum ipsa itaque placeat sit, excepturi eius. 
+    Nostrum perspiciatis, eligendi quae consectetur praesentium exercitationem.
+  </div>
+
+  <div style="height: 1000px">
+  </div>
+
+  <script>
+    // div의 스크롤바 내린양 + 눈에 보이는 div 박스 높이 == div의 실제 높이
+    // document.querySelector('.lorem').addEventListener('scroll', function() {
+    //   var scrollMount = document.querySelector('.lorem').scrollTop;
+    //   var scrollHeight = document.querySelector('.lorem').scrollHeight;
+    //   var divHeight = document.querySelector('.lorem').clientHeight;
+    //   console.log(scrollMount, scrollHeight);
+    // })
+
+    var scrollCheck = true;
+    $('.lorem').on('scroll', function(){
+      var scrollMount = document.querySelector('.lorem').scrollTop;
+      var scrollHeight = document.querySelector('.lorem').scrollHeight;
+      var divHeight = document.querySelector('.lorem').clientHeight;
+      if(scrollCheck == true) {
+        if (scrollMount + divHeight > scrollHeight - 10) {
+          alert('다 읽음')
+          scrollCheck = false;
         }
-      });
+      }
+    });
 
+    var htmlscrollCheck = true;
+    $(window).scroll(function() {
+      // var htmlscrollCheckDelay = 100;
 
-      // badge 클릭 횟수가 홀수면 클릭시 내부 글자를 Light로 변경
-      // badge 클릭 횟수가 짝수면 클릭시 내부 글자를 Dark로 변경
-      var badgeCnt = 0;
-      // document.querySelector('.badge').addEventListener('click', function() {
-      //   badgeCnt++;
-      //   if(badgeCnt % 2 == 1) {
-      //     document.querySelector('.badge').innerHTML = 'Light 🔄';
-      //   } else {
-      //     document.querySelector('.badge').innerHTML = 'Dark 🔄';
-      //   }
-      // })
-      $('.badge').on('click', function() {
-        badgeCnt++;
-        if(badgeCnt % 2 == 1) {
-          $('.badge').html('Light 🔄');
-        } else {
-          $('.badge').html('Dark 🔄');
-        }
-      })
+      var htmlscrollMount = document.querySelector('html').scrollTop;  //현재 웹페이지 스크롤양
+      var htmlscrollHeight = document.querySelector('html').scrollHeight; //현재 웹페이지 실제높이
+      var htmlHeight = document.querySelector('html').clientHeight; //현재 웹페이지 보이는 높이임
+      const currentpercent = htmlscrollMount / (htmlscrollHeight - htmlHeight) * 100
+      document.querySelector(".progressbar").style.width =
+        currentpercent + "%";
 
-    </script>
-
-    <ul class="list-group">
-      <li class="list-group-item">An item</li>
-      <li class="list-group-item">A second item</li>
-      <li class="list-group-item">A third item</li>
-      <li class="list-group-item">A fourth item</li>
-      <li class="list-group-item">And a fifth one</li>
-    </ul>
-
-    <div class="main-bg">
-      <h4>Shirts on Sale</h4>
-      <button id="login" class="btn btn-danger">로그인</button>
-    </div>
-    <!-- <button id="login">로그인</button> -->
-
-    <!-- <p class="hello">안녕</p>
-    <p class="hello">안녕</p>
-    <p class="hello">안녕</p>
-    <button id="test-btn">버튼</button> -->
-
-    <script> 
-      // document.getElementById('login').addEventListener('click', function(){
-      //   document.querySelector('.black-bg').classList.add('show-modal');
-      // })
-      $('#login').on('click', function() {
-        $('.black-bg').addClass('show-modal');
-      });
-
-      // document.getElementById('close').addEventListener('click', function(){
-      //   document.querySelector('.black-bg').classList.remove('show-modal');
-      // })
-      $('#close').on('click', function() {
-        $('.black-bg').removeClass('show-modal');
-      });
-
-      document.querySelector('.list-group')
-
-      document.querySelector('.navbar-toggler').addEventListener('click', function() {
-        document.querySelector('.list-group').classList.toggle('show');
-      });
-
-      // document.querySelector('.hello').innerHTML = '바보';
-      // $('.hello').html('바보');
-      // $('.hello').css('color', 'red');
-      // $('.hello').addClass('show');
-
-      // document.querySelector('#test-btn').addEventListener();
-      // $('#test-btn').on('click', function() {
-      //   $('.hello').slideUp();
-      // });
-    </script>
-
-    <div class="lorem" style="width: 200px; height:100px; overflow-y: scroll">
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-      Quae voluptas voluptatum minus praesentium fugit debitis at, laborum ipsa itaque placeat sit, excepturi eius. 
-      Nostrum perspiciatis, eligendi quae consectetur praesentium exercitationem.
-    </div>
-
-    <div style="height: 1000px">
-    </div>
-
-    <script>
-      // div의 스크롤바 내린양 + 눈에 보이는 div 박스 높이 == div의 실제 높이
-      // document.querySelector('.lorem').addEventListener('scroll', function() {
-      //   var scrollMount = document.querySelector('.lorem').scrollTop;
-      //   var scrollHeight = document.querySelector('.lorem').scrollHeight;
-      //   var divHeight = document.querySelector('.lorem').clientHeight;
-      //   console.log(scrollMount, scrollHeight);
-      // })
-
-      var scrollCheck = true;
-      $('.lorem').on('scroll', function(){
-        var scrollMount = document.querySelector('.lorem').scrollTop;
-        var scrollHeight = document.querySelector('.lorem').scrollHeight;
-        var divHeight = document.querySelector('.lorem').clientHeight;
-        if(scrollCheck == true) {
-          if (scrollMount + divHeight > scrollHeight - 10) {
+      if(htmlscrollCheck == true) {
+        if (htmlscrollMount + htmlHeight > htmlscrollHeight - 100) {
             alert('다 읽음')
-            scrollCheck = false;
-          }
+
+            htmlscrollCheck = false;
         }
-      });
+      };
+    });
 
-      var htmlscrollCheck = true;
-      $(window).scroll(function() {
-        // var htmlscrollCheckDelay = 100;
+    // window.addEventListener("scroll", function () {
+    //   var 내스크롤양 = window.scrollY;
+    //   var 윈도우실제높이 = document.querySelector("html").scrollHeight;
+    //   var 눈에보이는윈도우높이 = document.querySelector("html").clientHeight;
+    //   const currentpercent =
+    //     내스크롤양 / (윈도우실제높이 - 눈에보이는윈도우높이) * 100;
+    //   document.querySelector(".progressbar").style.width =
+    //     currentpercent + "%";
+    // });
 
-        var htmlscrollMount = document.querySelector('html').scrollTop;  //현재 웹페이지 스크롤양
-        var htmlscrollHeight = document.querySelector('html').scrollHeight; //현재 웹페이지 실제높이
-        var htmlHeight = document.querySelector('html').clientHeight; //현재 웹페이지 보이는 높이임
-        const currentpercent = htmlscrollMount / (htmlscrollHeight - htmlHeight) * 100
-        document.querySelector(".progressbar").style.width =
-          currentpercent + "%";
+  </script>
 
-        if(htmlscrollCheck == true) {
-          if (htmlscrollMount + htmlHeight > htmlscrollHeight - 100) {
-              alert('다 읽음')
+  <div class="alert alert-danger">
+    <span id="sec">5</span>초 이내 구매시 사은품 증정 !
+  </div>
 
-              htmlscrollCheck = false;
-          }
-        };
-      });
+  <script>
+    var timer = 5;
+    setInterval(function() {
+      timer -= 1;
+      if(timer >= 0){
+        document.querySelector('#sec').innerHTML = timer;
+      } else {
+        $('.alert').hide()
+      }
+    }, 1000)
 
-      // window.addEventListener("scroll", function () {
-      //   var 내스크롤양 = window.scrollY;
-      //   var 윈도우실제높이 = document.querySelector("html").scrollHeight;
-      //   var 눈에보이는윈도우높이 = document.querySelector("html").clientHeight;
-      //   const currentpercent =
-      //     내스크롤양 / (윈도우실제높이 - 눈에보이는윈도우높이) * 100;
-      //   document.querySelector(".progressbar").style.width =
-      //     currentpercent + "%";
-      // });
+  </script>
 
-    </script>
-
-    <div class="alert alert-danger">
-      <span id="sec">5</span>초 이내 구매시 사은품 증정 !
-    </div>
-
-    <script>
-      var timer = 5;
-      setInterval(function() {
-        timer -= 1;
-        if(timer >= 0){
-          document.querySelector('#sec').innerHTML = timer;
-        } else {
-          $('.alert').hide()
-        }
-      }, 1000)
-
-    </script>
-
-    <div style="overflow: hidden;">
-      <div class="slide-container">
-        <div class="slide-box">
-          <img src="img/car1.png">
-        </div>
-        <div class="slide-box">
-          <img src="img/car2.png">
-        </div>
-        <div class="slide-box">
-          <img src="img/car3.png">
-        </div>
+  <div style="overflow: hidden;">
+    <div class="slide-container">
+      <div class="slide-box">
+        <img src="img/car1.png">
+      </div>
+      <div class="slide-box">
+        <img src="img/car2.png">
+      </div>
+      <div class="slide-box">
+        <img src="img/car3.png">
       </div>
     </div>
+  </div>
 
-    <button class="slide-1">1</button>
-    <button class="slide-2">2</button>
-    <button class="slide-3">3</button>
-    <button class="next">다음</button>
-    <button class="prev">이전</button>
+  <button class="slide-1">1</button>
+  <button class="slide-2">2</button>
+  <button class="slide-3">3</button>
+  <button class="next">다음</button>
+  <button class="prev">이전</button>
 
-    <script>
-      var transSlide = 0;
-      var imgNow = 1;
-      $('.slide-1').on('click', function() {
-        $('.slide-container').css('transform', 'translateX(0vw)');
-        imgNow = 1;
-      })
-      $('.slide-2').on('click', function() {
-        // document.querySelector('.slide-container').style.transform = 'translateX(-100vw)';
+  <script>
+    var transSlide = 0;
+    var imgNow = 1;
+    $('.slide-1').on('click', function() {
+      $('.slide-container').css('transform', 'translateX(0vw)');
+      imgNow = 1;
+    })
+    $('.slide-2').on('click', function() {
+      // document.querySelector('.slide-container').style.transform = 'translateX(-100vw)';
+      $('.slide-container').css('transform', 'translateX(-100vw)');
+      imgNow = 2;
+    })
+    $('.slide-3').on('click', function() {
+      $('.slide-container').css('transform', 'translateX(-200vw)');
+      imgNow = 3;
+    })
+
+    $('.next').on('click', function(){
+      if (imgNow == 1) {
         $('.slide-container').css('transform', 'translateX(-100vw)');
         imgNow = 2;
-      })
-      $('.slide-3').on('click', function() {
+      } 
+      else if (imgNow == 2){
         $('.slide-container').css('transform', 'translateX(-200vw)');
         imgNow = 3;
-      })
+      }
+    })
+    // $('.next').on('click', function(){
+    //   $('.slide-container').css('transform', 'translateX(-' + imgNow + '00vw)');
+    //   imgNow += 1;
+    // })
+    $('.prev').on('click', function(){
+      if (imgNow == 3) {
+        $('.slide-container').css('transform', 'translateX(-100vw)');
+        imgNow = 2;
+      } 
+      else if (imgNow == 2){
+        $('.slide-container').css('transform', 'translateX(0vw)');
+        imgNow = 1;
+      }
+    })
 
-      $('.next').on('click', function(){
-        if (imgNow == 1) {
-          $('.slide-container').css('transform', 'translateX(-100vw)');
-          imgNow = 2;
-        } 
-        else if (imgNow == 2){
-          $('.slide-container').css('transform', 'translateX(-200vw)');
-          imgNow = 3;
-        }
-      })
-      // $('.next').on('click', function(){
-      //   $('.slide-container').css('transform', 'translateX(-' + imgNow + '00vw)');
-      //   imgNow += 1;
-      // })
-      $('.prev').on('click', function(){
-        if (imgNow == 3) {
-          $('.slide-container').css('transform', 'translateX(-100vw)');
-          imgNow = 2;
-        } 
-        else if (imgNow == 2){
-          $('.slide-container').css('transform', 'translateX(0vw)');
-          imgNow = 1;
-        }
-      })
-
-      $('html').on('scroll', function(){
-        var scrolHtmllMount = document.querySelector('html').scrollTop;
-        var scrollHtmlHeight = document.querySelector('html').scrollHeight;
-        var htmlHeight = document.querySelector('html').clientHeight;
-        if (scrolHtmllMount + htmlHeight > scrollHtmlHeight - 50) {
-          alert('다 읽음')
-        }
-      });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    
-  </body>
+    $('html').on('scroll', function(){
+      var scrolHtmllMount = document.querySelector('html').scrollTop;
+      var scrollHtmlHeight = document.querySelector('html').scrollHeight;
+      var htmlHeight = document.querySelector('html').clientHeight;
+      if (scrolHtmllMount + htmlHeight > scrollHtmlHeight - 50) {
+        alert('다 읽음')
+      }
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  
+</body>
 </html>
