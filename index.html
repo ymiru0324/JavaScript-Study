@@ -33,6 +33,12 @@
   </div> 
 
   <script>
+    document.querySelector('.black-bg').addEventListener('click', function(e) {
+      if (e.target == document.querySelector('.black-bg')) {
+        document.querySelector('.black-bg').classList.remove('show-modal');
+      }
+    })
+
     // document.querySelector('#send').addEventListener('click', function() {
     //   if(document.getElementById('email').value == "") {
     //     alert('아이디 입력하세요')
